@@ -1,0 +1,56 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication6;
+import java.util.*;
+/**
+ *
+ * @author User 1
+ */
+public class JavaApplication6 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int amount=sc.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        int cnt=0;
+        LinkedList<Integer> l=new LinkedList<Integer>();
+        
+        for(int i=0;i<a.length;i++)
+        {
+            for(int j=i+1;j<a.length-1;j++)
+                
+            {if(a[i]<a[j]){
+                int temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        
+            }
+        }
+        for(int i=0;i<a.length;i++)
+        {       int x=amount/a[i];
+        cnt=cnt+x;
+        //System.out.println(cnt);
+         amount=amount%a[i];
+         if(x!=0)
+         {
+             l.add(a[i]);
+         }
+        
+        }System.out.println(cnt);
+        System.out.println(l);
+    }
+    
+}
