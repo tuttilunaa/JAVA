@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+class Balance1
+{
+ public static void main(String[] args)
+ {
+   int i,j,n;
+   int flag=0;
+   String s;
+   Scanner sc=new Scanner(System.in);
+   System.out.println("enter the expression");
+   s=sc.nextLine();
+   char[] a=s.toCharArray();
+   Deque<Character> d=new LinkedList<>();
+   for(i=0;i<a.length;i++)
+   { 
+    if((a[i]=='(')||(a[i]=='{')||(a[i]=='['))
+	{
+	 d.push(a[i]);
+	 }
+	 else
+	 {
+	   if(!d.isEmpty())
+	   {
+	    if((d.peekFirst()=='('&&a[i]==')')||(d.peekFirst()=='{'&&a[i]=='}')||(d.peekFirst()=='['&&a[i]==']'))
+		{
+		 flag=1;
+		 }
+		 }
+		 }
+		 }
+		 if(flag==1)
+		 {
+		   System.out.println("balanced");
+		   }
+		   else{System.out.println("not balanced");
+		   }
+		   }
+		   }
