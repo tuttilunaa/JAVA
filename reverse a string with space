@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.*;
+class Rotate1
+{
+ public static void main(String[] args)
+ {
+   int temp,rem,n,sum=0,i,j;
+   String s1,s2;
+   Scanner sc=new Scanner(System.in);
+   System.out.println("enter the string1");
+   s1=sc.nextLine();
+   char[] a=s1.toCharArray();
+   char[] b=new char[a.length];
+   for(i=0;i<a.length;i++)
+   {
+    if(a[i]==' ')
+	{
+	 b[i]=' ';
+	 }
+	 }
+	 int len=b.length;
+	 System.out.println(len);
+	 j=b.length-1;
+	 for(i=0;i<a.length;i++)
+	 {
+		 if(a[i]!=' ')
+		 {
+			 if(b[j]==' ')
+			 {
+				 j--;
+			 }
+			 b[j]=a[i];
+			 j--;
+	 }}
+	 
+	 System.out.println(String.valueOf(b));
+	 }
+	 }
